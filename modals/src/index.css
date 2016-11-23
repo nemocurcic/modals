@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.modalcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(circle at 43% 16%, rgba(248, 249, 250, 0.96), rgba(207, 214, 218, 0.9));
+}
