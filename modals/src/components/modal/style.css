@@ -1,72 +1,87 @@
 .modalitem {
-    height: 400px;
-    max-width: 400px;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    margin:0;
     display: flex;
     flex-direction: column;
-    font-size: 18px;
+    font-size: 1rem;
     font-family: 'Roboto';
     text-align: center;
+    align-self: center;
     color: #000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    cursor: default;
     background: #fff;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.08), 0px 0px 2px 0px rgba(0,0,0,0.09);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1), 0px 0px 22px 0px rgba(0,0,0,0.09);
 }
 
 .modalitem__header {
     background: #F9F9F9;
-    height: 50px;
+    height: 3rem;
     display: flex;
 }
 .modalitem__header__label {
     margin: auto;
 }
 
-.modalitem__avatar {
-    margin: 28px 0 16px 0;
+.modalitem__container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto;
+}
+
+.modalitem__container__avatar {
     display: flex;
     justify-content: center;
     align-self: center;
-    height: 100px;
-    width: 100px;
+    height: 6rem;
+    width: 6rem;
     border-radius: 50%;
     overflow: hidden;
+    justify-content: center;
+    margin: auto;
 }
 
-.modalitem__avatar img {
+.modalitem__container__avatar img {
     height: 100%;
 }
 
-.modalitem__name {
+.modalitem__container__name-wrapper {
+    margin: auto;
+}
+
+.modalitem__container__name-wrapper__name {
     font-weight: bold;
     text-transform: uppercase;
     opacity: 1;
-    line-height: 1.2;
 }
 
-.modalitem__title {
-    font-size: 14px;
+.modalitem__container__name-wrapper__title {
+    font-size: 0.8rem;
     text-transform: uppercase;
     opacity: 0.7;
+    margin: auto;
 }
 
-.modalitem__description {
-    height: 100px;
+.modalitem__container__description {
+    height: auto;
     display: flex;
+    margin: auto;
 }
 
-.modalitem__description__text {
+.modalitem__container__description__text {
     margin: auto;
     opacity: 0.7;
-    padding: 0 22px;
+    padding: 0 5%;
 }
 
 .modalitem__buttons {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 68px;
-    position: absolute;
+    height: 4rem;
     display: flex;
 }
 
@@ -76,7 +91,6 @@
     justify-content: center;
     background: #F9F9F9;
     flex: 0.5;
-
     text-transform: uppercase;
 }
 

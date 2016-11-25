@@ -14,40 +14,39 @@ class App extends Component {
             modals: modalsData.modals,
         })
     }
-  render() {
-      console.log('CALL RENDER');
-    return (
-      <div className="App">
-      <div className="modalcontainer">
-        {
-            this.state.modals.map((modal, index) => {
-            return (
-                <Modal
-                    color="red"
-                    key={modal.id}
-                    index={index}
-                    swipeCallback={
-                        () => this.onModalSwipe()
-                    }
-                    data={modal}>
-                </Modal>
-            )})
-        }
-        </div>
-      </div>
-    );
-  }
 
-  onModalSwipe() {
-      const firstModal = Object.assign({}, this.state.modals[0]);
-      console.log(firstModal);
-      const newState = Object.assign([], this.state.modals);
-      newState.shift();
-      newState.push(firstModal);
-      this.setState({
-          modals: newState,
-      });
-  }
+    render() {
+        return (
+          <div className="App">
+          <div className="modalcontainer">
+            {
+                this.state.modals.map((modal, index) => {
+                return (
+                    <Modal
+                        color="red"
+                        key={modal.id}
+                        index={index}
+                        swipeCallback={
+                            () => this.onModalSwipe()
+                        }
+                        data={modal}>
+                    </Modal>
+                )})
+            }
+            </div>
+          </div>
+        );
+    }
+
+    onModalSwipe() {
+        const firstModal = Object.assign({}, this.state.modals[0]);
+        const newState = Object.assign([], this.state.modals);
+        newState.shift();
+        newState.push(firstModal);
+        this.setState({
+            modals: newState,
+        });
+    }
 }
 
 export default App;
